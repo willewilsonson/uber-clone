@@ -6,12 +6,22 @@ import NavigateCard from '../components/NavigateCard';
 import RideOptionsCard from '../components/RideOptionsCard';
 import MapView from 'react-native-maps';
 import { createStackNavigator } from '@react-navigation/stack';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import { Icon } from 'react-native-elements/dist/icons/Icon';
+import { useNavigation } from '@react-navigation/native';
 
 const MapScreen = () => {
     const Stack = createStackNavigator();
+    const navigation = useNavigation();
 
     return (
         <View>
+            <TouchableOpacity style={tw`bg-gray-100 absolute top-16 left-8 z-50 p-3 rounded-full shadow-lg`}>
+                <Icon 
+                    onPress={() => navigation.navigate('HomeScreen')}
+                    name='menu'
+                />
+            </TouchableOpacity>
             <View style={tw`h-1/2`}>
                 <Map />
             </View>
