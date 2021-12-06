@@ -6,3 +6,7 @@ An Uber Clone app built for mobile devices
 React Native
 
 Redux
+
+Tailwind
+
+Google API
